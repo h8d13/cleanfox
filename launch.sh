@@ -14,8 +14,8 @@ cleanup() {
 }
 
 prepare() {
-    # archive mode copy
-    cp -a "$SOURCE/." "$TEMP_PROFILE/"
+    # archive mode copy + no target directory 
+    cp -aT "$SOURCE/" "$TEMP_PROFILE/"
 }
 # arm the trap, redirect stdout/stderr to devnull, background/disown so we keep the shell
 (
