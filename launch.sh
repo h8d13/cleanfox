@@ -17,10 +17,11 @@ prepare() {
     # archive mode copy + no target directory 
     cp -aT "$SOURCE/" "$TEMP_PROFILE/"
 }
+
 # arm the trap, redirect stdout/stderr to devnull, background/disown so we keep the shell
 # if launched from a shell... otherwise still works.
 (
     trap cleanup EXIT INT TERM
-    prepare && firefox --no-remote --profile "$TEMP_PROFILE" 1> /dev/null 2> /dev/null
+    prepare && firefox --profile "$TEMP_PROFILE" &>/dev/null
 ) &
-disown 
+disown
