@@ -1,7 +1,7 @@
 [Desktop Entry]
 Comment[en_US]=
 Comment=
-Exec='/home/user/pathto/cleanfox.sh'
+Exec='/home/user/pathto/launch.sh'
 GenericName[en_US]=
 GenericName=
 Icon=internet-web-browser-symbolic
